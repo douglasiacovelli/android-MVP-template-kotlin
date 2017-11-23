@@ -1,24 +1,17 @@
 package ${packageName}
 
-import com.worldpackers.travelers.common.BasePresenter
-
-class ${className}Presenter(val contract: ${className}Contract): BasePresenter() {
+class ${className}Presenter(val contract: ${className}Contract) {
 
     init {
         fetchData()
     }
 
-    override fun onClickTryAgain() {
-        fetchData()
-    }
-
-    override fun onDestroy() {
+    fun onDestroy() {
 
     }
 
     private fun fetchData() {
-        setLoading(true)
-        setTryAgain(false)
+    
     }
 
 }

@@ -13,6 +13,9 @@
     <instantiate from="src/res/layout/mvp_databinding_activity.xml.ftl"
        to="${escapeXmlAttribute(resOut)}/layout/${layoutActivityName}.xml" />
 
+    <merge from="AndroidManifest.xml.ftl"
+      to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml" />
+
     <open file="${srcOut}/${className}Presenter.kt"/>
     <open file="${srcOut}/${className}Activity.kt"/>
     <open file="${srcOut}/${className}Contract.kt"/>

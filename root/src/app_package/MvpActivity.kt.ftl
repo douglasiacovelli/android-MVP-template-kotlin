@@ -4,13 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import com.worldpackers.travelers.R
-import com.worldpackers.travelers.billing.GetMembershipInfo
-import com.worldpackers.travelers.common.BaseActivity
-import com.worldpackers.travelers.databinding.Activity${className}Binding
-import timber.log.Timber
+import android.support.v7.app.AppCompatActivity;
 
-class ${className}Activity : BaseActivity(), ${className}Contract {
+class ${className}Activity : AppCompatActivity(), ${className}Contract {
     lateinit var dataBinding: Activity${className}Binding
     var presenter: ${className}Presenter? = null
 
@@ -20,7 +16,6 @@ class ${className}Activity : BaseActivity(), ${className}Contract {
         presenter = ${className}Presenter(this)
 
         dataBinding.presenter = presenter
-        setupToolbar(dataBinding.toolbar, ${showTitle?c})
     }
 
     override fun onDestroy() {
