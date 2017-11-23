@@ -29,17 +29,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         </LinearLayout>
 
-        <include
-            layout="@layout/loading_screen"
-            app:presenter="@{presenter.loadingPresenter}"
-            tools:visibility="gone"/>
-
-        <include layout="@layout/no_internet_screen"
-            app:presenter="@{presenter.noInternetPresenter}"
-            tools:visibility="gone" />
     </android.support.design.widget.CoordinatorLayout>
 </layout>
