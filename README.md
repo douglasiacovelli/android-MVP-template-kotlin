@@ -6,6 +6,7 @@ MVP Template to generate Activity, Presenter, Contract and databinding Layout
 3. Copy the folder to the AndroidStudio installation folder:
 
 MAC: `/Applications/Android Studio/Contents/plugins/android/lib/templates/other/`
+
 Windows: `C:\Program Files\Android\Android Studio\Plugins\android\lib\templates\other`
 
 4. Restart Android Studio
