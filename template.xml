@@ -1,0 +1,31 @@
+<template format="4"
+  revision="1"
+  name="MVP Template Activity"
+  description="Creates a new MVP Screen - Activity, Presenter and Contract">
+
+  <category value="Other" />
+
+  <parameter id="className"
+    name="Screen Name"
+    type="string"
+    constraints="class|unique|nonempty"
+    default="MvpScreen"
+    help="The name of the screen that requires MVP views" />
+
+  <parameter id="layoutActivityName"
+    name="Layout Name"
+    type="string"
+    constraints="layout|unique|nonempty"
+    suggest="${activityToLayout(className)}"
+    default="activity_mvp"
+    help="The name of the layout to create for the activity"/>
+
+  <parameter id="showTitle"
+    name="Is Title Visible?"
+    type="boolean"
+    default="false"
+    help="If true, this activity will show the title on the toolbar" />
+
+  <globals file="globals.xml.ftl" />
+  <execute file="recipe.xml.ftl" />
+</template>
